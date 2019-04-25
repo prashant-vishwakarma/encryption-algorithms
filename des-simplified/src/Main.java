@@ -155,5 +155,35 @@ public class Main {
 	static String doEXOR(String string1, String string2) {
 		return Integer.toString((Integer.parseInt(string1) ^ Integer.parseInt(string2)));
 	}
+	
+	
+	static int binary(char i, char j) {
+		int num = 0;
+		if (i == '0' && j == '0') {
+			num = 0;
+		}
+		if (i == '0' && j == '1') {
+			num = 1;
+		}
+		if (i == '1' && j == '0') {
+			num = 2;
+		}
+		if (i == '1' && j == '1') {
+			num = 3;
+		}
+		return num;
+	}
+
+	static String Exor(String string, String key) {
+		for (int i = 0; i < string.length(); i++) // step 3
+		{
+			if ((string.charAt(i) == key.charAt(i))) {
+				string = string.substring(0, i) + "0" + string.substring(i + 1); // kya karu
+			} else {
+				string = string.substring(0, i) + "1" + string.substring(i + 1); // kya karu
+			}
+		}
+		return string;
+	}
 
 }
