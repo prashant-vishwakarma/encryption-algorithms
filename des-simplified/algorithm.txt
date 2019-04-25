@@ -1,0 +1,29 @@
+1. Inital permutation(8bit) with i/p (8bit) ------->  8bit -------> LS+RS
+
+2. Take RS from (1.) apply expand(41232341) ------->  8bit -------> o/p
+
+3. Perform XOR  -------------------> o/p XOR k1 -------> o/p (1234(S0)1234(S1)) row--->1n4th place col--->2n3rd place
+
+4. Table function gives -------> 4bit
+
+5. Apply p4 permutation -------> 4bit
+
+6. Perform XOR -------> LS XOR 4bit -------> 4bit
+
+7. Join  -------> -------> -------> -------> -------> 4bit + RS
+
+8. Swap ------->------->------->------->------->------->  RS + 4bit ------->LS + RS
+
+9. Repeat 2. on updated RS
+
+10.Repeat 3. with k2 
+
+11.Repeat 4.
+
+12.Repeat 5.
+
+13.Repeat 6.
+
+14.Repeat 7.
+
+15.Now apply IP inverse.
